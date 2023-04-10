@@ -21,6 +21,9 @@ collections:
           widget: "image", 
           required: false }
       - { label: "Corps", name: "body", widget: "markdown" }
+      - { label: "Images", name: "images", widget: "list", fields: [
+          { label: "Image", name: "image", widget: "image" }
+        ]}
   - name: "pages"
     label: "Pages"
     files:
