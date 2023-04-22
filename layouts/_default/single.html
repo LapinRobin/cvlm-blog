@@ -10,4 +10,9 @@
 
 {{ .Content }}
 
+{{ range .Params.images }}
+  <img src="{{ .image }}" alt="Image">
+{{ end }}
+
+
 {{ partial "footer.html" . }}
