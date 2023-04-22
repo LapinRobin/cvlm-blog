@@ -1,3 +1,5 @@
+{{ $month_names := slice "janvier" "février" "mars" "avril" "mai" "juin" "juillet" "août" "septembre" "octobre" "novembre" "décembre" }}
+{{ $month := sub .Date.Month 1 }}
 {{ partial "header.html" . }}
 
 <h1>{{ .Title }}</h1>
@@ -9,9 +11,8 @@
   <h3>
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
   </h3>
-	<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-		{{ .Date.Format "January 2, 2006" }}
-	</time>
+	<time datetime="{{ .Date.Format "2006-01-02"}}">{{ .Date.Day }}&nbsp;{{ index $month_names $month }} {{ .Date.Year }}</time>
+
 </article>
 {{ end }}
 
