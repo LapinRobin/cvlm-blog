@@ -3,7 +3,7 @@ backend:
   branch: main
 local_backend: true
 media_folder: "" # Folder where user uploaded files should go
-public_folder: "images"
+public_folder: ""
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/post
     label: "Posts" # Used in the UI
